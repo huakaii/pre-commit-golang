@@ -4,6 +4,6 @@
 #
 set -e -o pipefail
 
-exec 4>&1
-output="$(gofmt -l -w "$@" | tee /dev/fd/4)"
+exec 5>&1
+output="$(gofmt -l -w "$@" | tee /dev/fd/5)"
 [[ -z "$output" ]]
