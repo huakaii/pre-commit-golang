@@ -1,3 +1,10 @@
+-   id: make-precommit
+    name: "run `make precommit`"
+    entry: make-precommit.sh
+    files: '(\.go$)|(\bgo\.mod$)'
+    exclude: '(^|/)vendor/'
+    language: 'script'
+    pass_filenames: false
 -   id: go-fmt
     name: 'go fmt'
     entry: run-go-fmt.sh
